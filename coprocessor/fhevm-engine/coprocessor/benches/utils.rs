@@ -92,6 +92,7 @@ async fn start_coprocessor(rx: Receiver<bool>, app_port: u16, db_url: &str) {
         server_maximum_ciphertexts_to_schedule: 20000,
         server_maximum_ciphertexts_to_get: 20000,
         work_items_batch_size: ecfg.batch_size,
+        dependence_chains_per_worker: 100,
         tenant_key_cache_size: 4,
         coprocessor_fhe_threads: 128,
         maximum_handles_per_input: 255,

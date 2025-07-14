@@ -329,7 +329,7 @@ async fn tree_reduction(
         }
         level_inputs = std::mem::take(&mut level_outputs);
     }
-    output_handles.push(output_handle);
+    output_handles.push(output_handle.clone());
     allow_handle(output_handle.clone(), &pool).await?;
 
     let mut compute_request = tonic::Request::new(AsyncComputeRequest {
